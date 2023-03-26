@@ -1,0 +1,6 @@
+<?xml version="1.0.0" encoding="utf-8"?>
+<AppInstaller
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2021"
+    Version="1.0.0"
+    Uri="www.smfsoftandtech.com">
+</AppInstaller>
