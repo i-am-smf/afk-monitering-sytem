@@ -15,7 +15,6 @@ class AdminPanel:
         self.adminpanel=Tk()
         self.adminpanel.title("WARING WINDOW")
         self.adminpanel.geometry("600x600")
-        # self.adminpanel.eval("tk::PlaceWindow . center")
         
         self.adminpanel.mainloop()
 
