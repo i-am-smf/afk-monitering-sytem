@@ -15,6 +15,7 @@ class AdminPanel:
         self.adminpanel=Tk()
         self.adminpanel.title("WARING WINDOW")
         self.adminpanel.geometry("600x600")
+        self.adminpanel.withdraw()
         
         self.adminpanel.mainloop()
 
@@ -58,5 +59,7 @@ AdminPanel()
 while True:
     # sleep(100)
     if getIdleTime()>=10:
-        c=AdminPanel()
-        c.startcounting()
+        ap=AdminPanel()
+        ap.adminpanel.deiconify()
+        # c=AdminPanel()
+        # c.startcounting()
