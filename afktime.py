@@ -1,5 +1,5 @@
 from win32api import GetTickCount,GetLastInputInfo
-from tkinter import Tk,Label,Toplevel
+from tkinter import Tk,Label
 from time import sleep
 from os import system
 
