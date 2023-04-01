@@ -7,21 +7,15 @@ def getIdleTime():
     return (GetTickCount() - GetLastInputInfo()) / 1000.0
 
 def shutdown():
-    print("System Shutdown")
-    # system("shutdown /s /t")
+    # print("System Shutdown")
+    system("shutdown /s /t")
 
-class AdminPanel:
-    def __init__(self):
-        self.adminpanel=Tk()
-        self.adminpanel.title("WARING WINDOW")
-        self.adminpanel.geometry("600x600")
-        self.adminpanel.withdraw()
-        
-        self.adminpanel.mainloop()
-
-    def startcounting(self):
+class Countdown:
+    def __init__(self) -> None:
         self.i=30
-        self.warwin=Toplevel(self.adminpanel)
+        self.startcounting()
+    def startcounting(self):
+        self.warwin=Tk()
 
         self.warwin.title("WARING WINDOW")
         self.warwin.geometry("400x300")
@@ -47,19 +41,9 @@ class AdminPanel:
         print("Shutdown Process Terminated")
         self.warwin.destroy()
 
-class Checking:
-    def __init__(self):
-        while True:
-            if getIdleTime()>=10:
-                c=AdminPanel()
-                c.startcounting()
-
-AdminPanel()
 
 while True:
-    # sleep(100)
-    if getIdleTime()>=10:
-        ap=AdminPanel()
-        ap.adminpanel.deiconify()
-        # c=AdminPanel()
-        # c.startcounting()
+    sleep(100)
+    if getIdleTime()>=600:
+        # print("starting countdown")
+        Countdown()
